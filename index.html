@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jayesh Prajapati | Electronics & Computer Science Engineering Portfolio | SLRTCE</title>
+  <meta name="description" content="Portfolio of Jayesh Prajapati, 2nd-year B.Tech Electronics & Computer Science student at Shree L. R. Tiwari College of Engineering (SLRTCE). Showcasing IoT, Embedded Systems, Robotics, and Software projects.">
+  <meta name="keywords" content="Jayesh Prajapati, Electronics and Computer Science, SLRTCE, Portfolio, IoT, Embedded Systems, Arduino, ESP32, Python, Robotics, Engineering Student">
+  <meta name="author" content="Jayesh Prajapati">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 3D WebGL Background Canvas -->
+  <canvas id="space-3d-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" aria-label="Home">
+        <div class="brand-chip">
+          <img src="jayesh_profile.jpg" alt="Jayesh Prajapati" class="nav-brand-avatar">
+          <span class="brand-text">JAYESH<span class="brand-dot">.</span><span class="brand-sub">ECS</span></span>
+        </div>
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#logic-lab" class="nav-link">Logic Lab <span class="nav-badge">Demo</span></a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <div class="status-pill" title="Current Status">
+          <span class="status-dot"></span>
+          <span class="status-text">2nd Year @ SLRTCE</span>
+        </div>
+        <a href="#contact" class="btn btn-outline nav-cta">Let's Connect</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="pulse-indicator"></span>
+            <span>Bridging Silicon &amp; Software</span>
+            <span class="badge-tag">B.Tech ECS</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Jayesh Prajapati</span>
+          </h1>
+
+          <div class="hero-typewriter-box">
+            <span class="typewriter-prefix">&gt; </span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Second-year undergraduate pursuing <strong>B.Tech in Electronics and Computer Science</strong> at 
+            <strong>Shree L. R. Tiwari College of Engineering (SLRTCE)</strong>. Passionate about IoT architectures, 
+            microcontroller systems, digital logic design, and robust full-stack software.
+          </p>
+
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <i class="fa-solid fa-bolt text-cyan"></i>
+              <span>Hardware-Software Synergy</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-graduation-cap text-purple"></i>
+              <span>SLRTCE Engineering</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-code text-green"></i>
+              <span>Embedded &amp; Web Systems</span>
+            </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-diagram-project"></i> View Projects
+            </a>
+            <a href="#logic-lab" class="btn btn-secondary">
+              <i class="fa-solid fa-sliders"></i> Test Logic Lab
+            </a>
+            <a href="#contact" class="btn btn-glass">
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <span class="social-label">Find me on:</span>
+            <a href="https://github.com/prajajayesh2007-bit" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub: prajajayesh2007-bit">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jayesh-prajapati-371262383" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn: Jayesh Prajapati">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/jayesh._._.09/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram" title="Instagram: @jayesh._._.09">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="mailto:prajajayesh2007@gmail.com" class="social-icon" aria-label="Email" title="Email: prajajayesh2007@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="#education" class="social-icon" aria-label="SLRTCE Profile" title="SLRTCE Profile">
+              <i class="fa-solid fa-building-columns"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="interactive-hologram-card">
+            <div class="card-glow"></div>
+            <div class="hologram-inner">
+              <!-- Visual Switcher: Profile Photo / 3D Silicon Core -->
+              <div class="hologram-tab-switcher">
+                <button class="holo-tab-btn active" id="tab-btn-photo" data-target="photo">
+                  <i class="fa-solid fa-user-astronaut"></i> Photo
+                </button>
+                <button class="holo-tab-btn" id="tab-btn-chip" data-target="chip">
+                  <i class="fa-solid fa-cube text-cyan"></i> 3D Core
+                </button>
+              </div>
+
+              <!-- 1. Real Profile Photo View (Default Active) -->
+              <div class="profile-photo-wrapper card-pop-z2" id="holo-view-photo">
+                <div class="photo-3d-frame">
+                  <img src="jayesh_profile.jpg" alt="Jayesh Prajapati - 2nd Year B.Tech ECS at SLRTCE" class="profile-photo-img">
+                  <div class="photo-cyber-border"></div>
+                  <div class="photo-verified-pill">
+                    <span class="status-dot"></span> SLRTCE ECS &bull; 2nd Year
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Interactive 3D Holographic Microchip -->
+              <div class="chip-3d-wrapper card-pop-z2" id="holo-view-chip" style="display: none;" title="Interactive 3D Microchip - Move mouse or drag to rotate">
+                <canvas id="chip-3d-canvas"></canvas>
+                <div class="chip-3d-badge">
+                  <i class="fa-solid fa-cube text-cyan"></i> 3D Quantum Core
+                </div>
+              </div>
+
+              <div class="hologram-info">
+                <h3 class="student-name">Jayesh Prajapati</h3>
+                <p class="student-degree">B.Tech in Electronics &amp; Computer Science</p>
+                <div class="college-tag">
+                  <i class="fa-solid fa-landmark"></i> Shree L. R. Tiwari College of Engineering
+                </div>
+
+                <div class="specs-grid">
+                  <div class="spec-card">
+                    <span class="spec-label">Year</span>
+                    <span class="spec-value">2nd Year (SE)</span>
+                  </div>
+                  <div class="spec-card">
+                    <span class="spec-label">Discipline</span>
+                    <span class="spec-value">ECS Branch</span>
+                  </div>
+                  <div class="spec-card">
+                    <span class="spec-label">Primary Stack</span>
+                    <span class="spec-value">C++, ESP32, Python</span>
+                  </div>
+                  <div class="spec-card">
+                    <span class="spec-label">Status</span>
+                    <span class="spec-value active-val"><i class="fa-solid fa-circle"></i> Innovating</span>
+                  </div>
+                </div>
+
+                <div class="live-terminal-preview">
+                  <div class="terminal-bar">
+                    <span class="t-dot red"></span>
+                    <span class="t-dot yellow"></span>
+                    <span class="t-dot green"></span>
+                    <span class="terminal-title">jayesh@slrtce: ~/core</span>
+                  </div>
+                  <div class="terminal-code">
+                    <code><span class="t-cmd">$</span> init_ecs_matrix --verbose</code>
+                    <code><span class="t-success">✔</span> Hardware: ESP32, Sensors, Digital Logic</code>
+                    <code><span class="t-success">✔</span> Software: C++, Data Structures, Full-Stack</code>
+                    <code><span class="t-accent">&gt;&gt; Ready to build the future.</span></code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-user-astronaut"></i> Background</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">Bridging low-level circuit dynamics with high-level software engineering.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card story-card">
+            <div class="card-icon-bubble">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3>The ECS Intersection</h3>
+            <p>
+              I am a second-year <strong>B.Tech Electronics &amp; Computer Science (ECS)</strong> student at 
+              <strong>Shree L. R. Tiwari College of Engineering (SLRTCE)</strong>. My passion lies in understanding 
+              how computing works from the ground up: from individual transistors and logic gates to firmware, 
+              operating principles, and web interfaces.
+            </p>
+            <p>
+              Rather than staying confined to either purely hardware or purely abstract code, I thrive at their 
+              intersection. Whether it's wiring an ESP32 microcontroller with environmental sensors or writing clean, 
+              efficient C++ and Python algorithms to process live telemetry data, I love building end-to-end solutions.
+            </p>
+            
+            <div class="about-stats-row">
+              <div class="stat-box">
+                <span class="stat-number">2nd</span>
+                <span class="stat-desc">Year B.Tech Student</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">5+</span>
+                <span class="stat-desc">Hardware &amp; Software Builds</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">100%</span>
+                <span class="stat-desc">Curiosity &amp; Drive</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card highlights-card">
+            <div class="card-icon-bubble">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3>What Drives Me</h3>
+            <ul class="highlights-list">
+              <li>
+                <div class="list-bullet"><i class="fa-solid fa-microchip"></i></div>
+                <div>
+                  <strong>Embedded Systems &amp; IoT</strong>
+                  <p>Interfacing microcontrollers (ESP32, Arduino) with sensors, actuators, and communication buses (I2C, SPI, UART).</p>
+                </div>
+              </li>
+              <li>
+                <div class="list-bullet"><i class="fa-solid fa-code-merge"></i></div>
+                <div>
+                  <strong>Software &amp; Algorithmic Foundations</strong>
+                  <p>Mastering Object-Oriented Programming, Data Structures &amp; Algorithms in C++ and Python, and building responsive web apps.</p>
+                </div>
+              </li>
+              <li>
+                <div class="list-bullet"><i class="fa-solid fa-network-wired"></i></div>
+                <div>
+                  <strong>Digital Systems &amp; Architecture</strong>
+                  <p>Exploring combinational &amp; sequential logic circuits, ALU design, state machines, and processor architectures.</p>
+                </div>
+              </li>
+              <li>
+                <div class="list-bullet"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div>
+                  <strong>Proud SLRTCE Student</strong>
+                  <p>Active participant in technical college labs, project exhibitions, and engineering workshops at SLRTCE.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Capabilities</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Skills Matrix</span></h2>
+          <p class="section-subtitle">A balanced toolkit designed for hardware prototyping and modern software engineering.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Hardware & Embedded -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon hardware-accent">
+                <i class="fa-solid fa-memory"></i>
+              </div>
+              <div>
+                <h3>Electronics &amp; Hardware</h3>
+                <span class="cat-sub">Microcontrollers &amp; Circuitry</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><i class="fa-solid fa-microchip"></i> Arduino Uno / Nano</span>
+              <span class="skill-pill"><i class="fa-solid fa-wifi"></i> ESP32 &amp; ESP8266</span>
+              <span class="skill-pill"><i class="fa-brands fa-raspberry-pi"></i> Raspberry Pi Basics</span>
+              <span class="skill-pill"><i class="fa-solid fa-wave-square"></i> I2C, SPI &amp; UART</span>
+              <span class="skill-pill"><i class="fa-solid fa-gauge-high"></i> MQ-135, DHT22, Ultrasonic</span>
+              <span class="skill-pill"><i class="fa-solid fa-gear"></i> Motor Drivers (L298N)</span>
+              <span class="skill-pill"><i class="fa-solid fa-diagram-project"></i> Digital Logic &amp; Breadboarding</span>
+            </div>
+          </div>
+
+          <!-- Software & Languages -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon software-accent">
+                <i class="fa-solid fa-terminal"></i>
+              </div>
+              <div>
+                <h3>Programming &amp; Software</h3>
+                <span class="cat-sub">Languages &amp; Core Systems</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><i class="fa-solid fa-code"></i> C / C++ (Embedded &amp; OOP)</span>
+              <span class="skill-pill"><i class="fa-brands fa-python"></i> Python (OpenCV, Scripting)</span>
+              <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
+              <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5 &amp; Modern CSS3</span>
+              <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL &amp; SQLite</span>
+              <span class="skill-pill"><i class="fa-solid fa-sitemap"></i> Data Structures &amp; Algorithms</span>
+              <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> WebSockets &amp; REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Tools & Simulation -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon tools-accent">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <div>
+                <h3>Tools &amp; Simulation</h3>
+                <span class="cat-sub">Development Environments</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill"><i class="fa-solid fa-laptop-code"></i> VS Code</span>
+              <span class="skill-pill"><i class="fa-solid fa-microchip"></i> Arduino IDE</span>
+              <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub</span>
+              <span class="skill-pill"><i class="fa-solid fa-sim-card"></i> Tinkercad Circuits</span>
+              <span class="skill-pill"><i class="fa-solid fa-draw-polygon"></i> Proteus Simulation</span>
+              <span class="skill-pill"><i class="fa-brands fa-linux"></i> Linux Terminal</span>
+              <span class="skill-pill"><i class="fa-solid fa-paper-plane"></i> Postman</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-rocket"></i> Portfolio Work</span>
+          <h2 class="section-title">Featured <span class="gradient-text">ECS Projects</span></h2>
+          <p class="section-subtitle">Real-world systems combining embedded microcontrollers, sensors, and intelligent software.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: IoT Smart Environmental Station -->
+          <article class="project-card" data-project="iot-station">
+            <div class="project-banner bg-gradient-iot">
+              <div class="banner-overlay">
+                <span class="project-type-badge"><i class="fa-solid fa-cloud-sun-rain"></i> IoT &amp; Sensors</span>
+                <span class="status-badge">Featured Build</span>
+              </div>
+              <div class="circuit-symbol"><i class="fa-solid fa-wifi"></i></div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">ESP32</span>
+                <span class="tag">MQ-135</span>
+                <span class="tag">DHT22</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">Chart.js</span>
+              </div>
+              <h3 class="project-title">IoT Smart Environmental &amp; Air Quality Monitor</h3>
+              <p class="project-desc">
+                An intelligent micro-station monitoring real-time Air Quality Index (AQI), hazardous gases (CO, NH3), 
+                temperature, and humidity. Transmits live telemetry over WebSockets to a responsive web dashboard with 
+                threshold buzzer triggers.
+              </p>
+              <div class="project-stats-grid">
+                <div class="p-stat">
+                  <span class="stat-lbl">Microcontroller</span>
+                  <span class="stat-val">ESP32 Dual Core</span>
+                </div>
+                <div class="p-stat">
+                  <span class="stat-lbl">Latency</span>
+                  <span class="stat-val">&lt; 200ms Live Feed</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="iot-station">
+                  <i class="fa-solid fa-circle-info"></i> View System Details
+                </button>
+                <a href="#logic-lab" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-code"></i> Architecture
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Gesture Controlled Rover -->
+          <article class="project-card" data-project="gesture-rover">
+            <div class="project-banner bg-gradient-rover">
+              <div class="banner-overlay">
+                <span class="project-type-badge"><i class="fa-solid fa-robot"></i> Robotics &amp; AI</span>
+                <span class="status-badge">Hardware</span>
+              </div>
+              <div class="circuit-symbol"><i class="fa-solid fa-hand"></i></div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">MediaPipe</span>
+                <span class="tag">Arduino Uno</span>
+                <span class="tag">L298N</span>
+              </div>
+              <h3 class="project-title">Edge Computer-Vision Gesture Controlled Rover</h3>
+              <p class="project-desc">
+                A 4WD robotic vehicle steered via real-time webcam hand gestures. Developed a Python OpenCV hand landmark 
+                tracker that maps finger coordinates to directional vectors, transmitted over serial to an Arduino Uno 
+                driving dual DC motors.
+              </p>
+              <div class="project-stats-grid">
+                <div class="p-stat">
+                  <span class="stat-lbl">Tracking</span>
+                  <span class="stat-val">21 Hand Landmarks</span>
+                </div>
+                <div class="p-stat">
+                  <span class="stat-lbl">Actuation</span>
+                  <span class="stat-val">PWM Speed Control</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="gesture-rover">
+                  <i class="fa-solid fa-circle-info"></i> View System Details
+                </button>
+                <a href="https://github.com/prajajayesh2007-bit" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Smart RFID Campus System -->
+          <article class="project-card" data-project="rfid-attendance">
+            <div class="project-banner bg-gradient-rfid">
+              <div class="banner-overlay">
+                <span class="project-type-badge"><i class="fa-solid fa-id-card-clip"></i> Embedded System</span>
+                <span class="status-badge">Full-Stack</span>
+              </div>
+              <div class="circuit-symbol"><i class="fa-solid fa-tower-broadcast"></i></div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">ESP8266</span>
+                <span class="tag">RC522 RFID</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">OLED Display</span>
+              </div>
+              <h3 class="project-title">Smart Contactless RFID Campus Access System</h3>
+              <p class="project-desc">
+                Designed for SLRTCE laboratory check-ins. Reads 13.56 MHz RFID cards using SPI protocol on ESP8266, displays 
+                instant student verification on a 0.96" I2C OLED screen, and logs entry timestamps to an SQLite database via 
+                REST API.
+              </p>
+              <div class="project-stats-grid">
+                <div class="p-stat">
+                  <span class="stat-lbl">Protocol</span>
+                  <span class="stat-val">SPI &amp; REST</span>
+                </div>
+                <div class="p-stat">
+                  <span class="stat-lbl">Verification</span>
+                  <span class="stat-val">Instant OLED + DB</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="rfid-attendance">
+                  <i class="fa-solid fa-circle-info"></i> View System Details
+                </button>
+                <a href="https://github.com/prajajayesh2007-bit" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-brands fa-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Digital Logic & Micro-Op Simulator -->
+          <article class="project-card" data-project="logic-simulator">
+            <div class="project-banner bg-gradient-logic">
+              <div class="banner-overlay">
+                <span class="project-type-badge"><i class="fa-solid fa-network-wired"></i> Digital Architecture</span>
+                <span class="status-badge">Web Simulator</span>
+              </div>
+              <div class="circuit-symbol"><i class="fa-solid fa-microchip"></i></div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tag">Vanilla JS</span>
+                <span class="tag">Canvas API</span>
+                <span class="tag">Digital Logic</span>
+                <span class="tag">Boolean Algebra</span>
+              </div>
+              <h3 class="project-title">Web-Based Digital Logic &amp; Micro-Op Simulator</h3>
+              <p class="project-desc">
+                An interactive educational tool that visualizes basic logic gates (AND, OR, XOR, NOT), truth tables, 
+                and half-adder / full-adder architectures. Demonstrates digital electronics concepts through real-time 
+                state evaluation.
+              </p>
+              <div class="project-stats-grid">
+                <div class="p-stat">
+                  <span class="stat-lbl">Gates Supported</span>
+                  <span class="stat-val">AND, OR, XOR, NAND...</span>
+                </div>
+                <div class="p-stat">
+                  <span class="stat-lbl">Interactive Demo</span>
+                  <span class="stat-val">Try below in Logic Lab</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <button class="btn btn-sm btn-primary view-project-btn" data-project="logic-simulator">
+                  <i class="fa-solid fa-circle-info"></i> View System Details
+                </button>
+                <a href="#logic-lab" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-play"></i> Live Lab
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Logic Lab Section (ECS Special Feature) -->
+    <section id="logic-lab" class="section logic-lab-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-flask-vial"></i> Interactive Experience</span>
+          <h2 class="section-title">The ECS <span class="gradient-text">Logic Gate Lab</span></h2>
+          <p class="section-subtitle">
+            Experience digital electronics in action! Select a logic gate, toggle inputs A &amp; B, and watch the circuit output and LED respond in real time.
+          </p>
+        </div>
+
+        <div class="logic-lab-container">
+          <div class="lab-controls-panel">
+            <div class="panel-header">
+              <h4><i class="fa-solid fa-sliders"></i> Gate Selector</h4>
+              <span class="mode-tag">Digital Logic v1.0</span>
+            </div>
+
+            <div class="gate-buttons" id="gate-selector">
+              <button class="gate-btn active" data-gate="AND">AND</button>
+              <button class="gate-btn" data-gate="OR">OR</button>
+              <button class="gate-btn" data-gate="XOR">XOR</button>
+              <button class="gate-btn" data-gate="NAND">NAND</button>
+              <button class="gate-btn" data-gate="NOR">NOR</button>
+              <button class="gate-btn" data-gate="NOT">NOT (A only)</button>
+            </div>
+
+            <div class="gate-formula-box">
+              <span class="formula-label">Boolean Expression:</span>
+              <span class="formula-value" id="gate-formula">Y = A • B</span>
+            </div>
+
+            <div class="input-toggles">
+              <div class="input-toggle-group">
+                <label for="input-a-toggle">Input A:</label>
+                <button class="toggle-switch" id="input-a-toggle" aria-label="Toggle Input A" data-val="0">
+                  <span class="switch-pill"></span>
+                  <span class="switch-value" id="val-a">0</span>
+                </button>
+              </div>
+
+              <div class="input-toggle-group" id="group-input-b">
+                <label for="input-b-toggle">Input B:</label>
+                <button class="toggle-switch" id="input-b-toggle" aria-label="Toggle Input B" data-val="0">
+                  <span class="switch-pill"></span>
+                  <span class="switch-value" id="val-b">0</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="quick-preset-btns">
+              <button class="preset-btn" id="btn-toggle-all">Invert All</button>
+              <button class="preset-btn" id="btn-reset-inputs">Reset (0, 0)</button>
+            </div>
+          </div>
+
+          <!-- Visual Circuit Simulation Display -->
+          <div class="lab-simulation-panel">
+            <div class="circuit-board">
+              <div class="board-top-status">
+                <span class="board-label"><i class="fa-solid fa-microchip"></i> VCC: +5.0V (Active)</span>
+                <span class="clock-label"><i class="fa-solid fa-clock"></i> Propagation Delay: &lt; 5ns</span>
+              </div>
+
+              <div class="circuit-wiring-diagram">
+                <!-- Input Pins -->
+                <div class="circuit-inputs-col">
+                  <div class="wire-pin" id="pin-a">
+                    <span class="pin-name">Pin A</span>
+                    <span class="wire-line wire-a"></span>
+                    <span class="wire-state" id="wire-state-a">LOW (0V)</span>
+                  </div>
+                  <div class="wire-pin" id="pin-b">
+                    <span class="pin-name">Pin B</span>
+                    <span class="wire-line wire-b"></span>
+                    <span class="wire-state" id="wire-state-b">LOW (0V)</span>
+                  </div>
+                </div>
+
+                <!-- Gate IC Graphic -->
+                <div class="gate-ic-block" id="gate-ic">
+                  <div class="ic-notch"></div>
+                  <div class="ic-label">74LS08</div>
+                  <div class="ic-gate-title" id="ic-gate-title">AND GATE</div>
+                  <div class="ic-symbol" id="ic-symbol">
+                    <!-- Dynamic SVG Gate symbol rendered here -->
+                    <svg viewBox="0 0 100 60" class="gate-svg" id="gate-svg">
+                      <path d="M 10 10 L 45 10 A 20 20 0 0 1 45 50 L 10 50 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+                      <line x1="0" y1="20" x2="10" y2="20" stroke="currentColor" stroke-width="3"/>
+                      <line x1="0" y1="40" x2="10" y2="40" stroke="currentColor" stroke-width="3"/>
+                      <line x1="65" y1="30" x2="95" y2="30" stroke="currentColor" stroke-width="3"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Output Wire & LED -->
+                <div class="circuit-output-col">
+                  <div class="wire-line wire-out" id="wire-out"></div>
+                  <div class="output-led-housing">
+                    <div class="led-bulb" id="output-led">
+                      <div class="led-core"></div>
+                    </div>
+                    <div class="led-info">
+                      <span class="led-label">Output Y</span>
+                      <span class="led-state-text" id="led-state-text">LOW (0)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live Truth Table Highlight -->
+              <div class="truth-table-wrapper">
+                <h5><i class="fa-solid fa-table-cells"></i> Active Truth Table</h5>
+                <table class="truth-table" id="truth-table">
+                  <thead>
+                    <tr>
+                      <th>Input A</th>
+                      <th>Input B</th>
+                      <th>Output Y</th>
+                    </tr>
+                  </thead>
+                  <tbody id="truth-table-body">
+                    <!-- Injected dynamically based on gate -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & SLRTCE Section -->
+    <section id="education" class="section education-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-building-columns"></i> Academics</span>
+          <h2 class="section-title">Education &amp; <span class="gradient-text">Institution</span></h2>
+          <p class="section-subtitle">Academic training fostering foundational theory and laboratory innovation.</p>
+        </div>
+
+        <div class="education-card">
+          <div class="edu-crest">
+            <div class="crest-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <span class="crest-year">2024 &ndash; Present</span>
+          </div>
+
+          <div class="edu-content">
+            <div class="edu-badge">Affiliated with University of Mumbai / Approved by AICTE</div>
+            <h3 class="edu-degree">Bachelor of Technology (B.Tech)</h3>
+            <h4 class="edu-major">Electronics and Computer Science (ECS)</h4>
+            <div class="edu-institution">
+              <i class="fa-solid fa-landmark"></i> Shree L. R. Tiwari College of Engineering (SLRTCE)
+            </div>
+            <p class="edu-location">
+              <i class="fa-solid fa-location-dot"></i> Mira Road East, Thane / Mumbai Region, Maharashtra, India
+            </p>
+            <p class="edu-desc">
+              Currently in the <strong>Second Year (SE)</strong> of the program. The ECS curriculum provides an 
+              in-depth interdisciplinary syllabus unifying computer hardware, microprocessors, operating systems, 
+              data structures, embedded programming, and signal processing.
+            </p>
+
+            <div class="coursework-section">
+              <h5><i class="fa-solid fa-book-open"></i> Key Coursework &amp; Laboratories:</h5>
+              <div class="course-chips">
+                <span class="course-chip">Digital Logic &amp; Circuit Design</span>
+                <span class="course-chip">Object Oriented Programming in C++</span>
+                <span class="course-chip">Data Structures &amp; Algorithms</span>
+                <span class="course-chip">Microprocessor &amp; Microcontroller Labs</span>
+                <span class="course-chip">Electronic Devices &amp; Circuits</span>
+                <span class="course-chip">Discrete Mathematics</span>
+                <span class="course-chip">Computer Organization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-envelope-open-text"></i> Get In Touch</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Collaborate</span></h2>
+          <p class="section-subtitle">Open for hackathons, technical projects, internships, and hardware-software discussions.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-col">
+            <div class="contact-card">
+              <h3>Have a project in mind?</h3>
+              <p>
+                Whether you're looking to discuss embedded hardware, IoT prototypes, software development, or an internship opportunity, feel free to reach out!
+              </p>
+
+              <div class="contact-channels">
+                <div class="channel-item">
+                  <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+                  <div>
+                    <span class="channel-title">Direct Email</span>
+                    <a href="mailto:prajajayesh2007@gmail.com" class="channel-link">prajajayesh2007@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="channel-item">
+                  <div class="channel-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                  <div>
+                    <span class="channel-title">College Campus</span>
+                    <span class="channel-text">SLRTCE, Kanakia Park, Mira Road, Mumbai</span>
+                  </div>
+                </div>
+
+                <div class="channel-item">
+                  <div class="channel-icon"><i class="fa-solid fa-globe"></i></div>
+                  <div>
+                    <span class="channel-title">Profiles &amp; Socials</span>
+                    <div class="mini-socials">
+                      <a href="https://github.com/prajajayesh2007-bit" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                      <a href="https://www.linkedin.com/in/jayesh-prajapati-371262383" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                      <a href="https://www.instagram.com/jayesh._._.09/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="campus-alert-box">
+                <i class="fa-solid fa-circle-check text-cyan"></i>
+                <div>
+                  <strong>Student at SLRTCE</strong>
+                  <p>Available for on-campus labs, inter-college hackathons, and technical team collaborations.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-col">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-title">
+                <h4>Send a Direct Message</h4>
+                <p>I'll respond as soon as possible.</p>
+              </div>
+
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="name" name="name" required placeholder="e.g. Alex Johnson">
+                </div>
+                <span class="error-msg" id="name-error">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-envelope input-icon"></i>
+                  <input type="email" id="email" name="email" required placeholder="e.g. alex@domain.com">
+                </div>
+                <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject / Project Interest</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-tag input-icon"></i>
+                  <select id="subject" name="subject">
+                    <option value="IoT Collaboration">IoT &amp; Hardware Collaboration</option>
+                    <option value="Internship">Internship Opportunity</option>
+                    <option value="Hackathon">Hackathon Teaming</option>
+                    <option value="General Inquiry">General Conversation</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <div class="input-wrap">
+                  <i class="fa-solid fa-message input-icon textarea-icon"></i>
+                  <textarea id="message" name="message" rows="4" required placeholder="Describe your project, question, or proposal..."></textarea>
+                </div>
+                <span class="error-msg" id="message-error">Please enter a message.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+                <span class="btn-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+              </button>
+
+              <div class="form-status" id="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Details Modal -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="modal-body-content">
+        <!-- Injected via JavaScript based on selected project -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <i class="fa-solid fa-microchip"></i> JAYESH PRAJAPATI <span>// ECS</span>
+        </div>
+        <p class="footer-sub">
+          2nd Year B.Tech in Electronics and Computer Science &bull; Shree L. R. Tiwari College of Engineering (SLRTCE)
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <div class="footer-nav">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#logic-lab">Logic Lab</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top" aria-label="Scroll back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year-copy">2025</span> Jayesh Prajapati. Built with modern HTML5, CSS3 &amp; JavaScript. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Three.js 3D Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- Script File -->
+  <script src="script.js"></script>
+</body>
+</html>
